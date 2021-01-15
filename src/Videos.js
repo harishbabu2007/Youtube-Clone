@@ -11,7 +11,7 @@ function Videos() {
     const getData = async () => {
       await fetch(
         url +
-          `/search?q=reactjs&key=${api_key}&part=snippet&maxResults=20&type=video&order=viewCount&videoEmbeddable=any`
+          `/search?q=reactjs&key=${api_key}&part=snippet&maxResults=50&type=video&order=viewCount&videoEmbeddable=any`
       )
         .then((res) => res.json())
         .then((data) => {

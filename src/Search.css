@@ -1,0 +1,28 @@
+.search__every {
+  display: flex;
+  margin: 20px;
+}
+
+.search__info {
+  margin-left: 10px;
+}
+
+.search__info > h4 {
+  margin-top: 5px;
+  color: gray;
+}
+
+.search__info > p {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+@media (max-width: 890px) {
+  .search__every > img {
+    object-fit: contain;
+    height: 100px;
+  }
+  .search__info > p {
+    display: none;
+  }
+}

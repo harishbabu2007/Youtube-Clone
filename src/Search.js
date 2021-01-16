@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import "./Videos.css";
 import "./Search.css";
 
-const Generator = ({ id, img, title, channel, desc }) => {
+const Generator = ({ id, img, title, channel }) => {
   return (
     <div className="search__every">
       <a href={`/watch/${id}`}>
@@ -13,14 +12,12 @@ const Generator = ({ id, img, title, channel, desc }) => {
       <div className="search__info">
         <h3>{title}</h3>
         <h4>{channel}</h4>
-        <p>{desc}</p>
       </div>
     </div>
   );
 };
 
-function SearchVideo() {
-  const { query } = useParams();
+function Search({ query }) {
   const api_key = "AIzaSyBRclFEYyh3Ispb5lN6m2FrIMy616CV9Uw";
   const url = "https://www.googleapis.com/youtube/v3";
   const [results, setResults] = useState(false);
@@ -48,7 +45,6 @@ function SearchVideo() {
               title={item.snippet.title}
               img={item.snippet.thumbnails.medium.url}
               channel={item.snippet.channelTitle}
-              desc={item.snippet.description}
               id={item.id.videoId}
             />
           );
@@ -57,4 +53,4 @@ function SearchVideo() {
   );
 }
 
-export default SearchVideo;
+export default Search;

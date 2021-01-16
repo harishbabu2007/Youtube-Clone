@@ -1,11 +1,14 @@
 import React from "react";
 import "./Videos.css";
+import { Link } from "react-router-dom";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 
-function VideoGen({ img, title, channel, views, uploade }) {
+function VideoGen({ id, img, title, channel, views, uploade }) {
   return (
     <div className="video">
-      <img src={img} alt="img"></img>
+      <a href={`/watch/${id}`}>
+        <img src={img} alt="img"></img>
+      </a>
       <div className="video__info">
         <div className="vido__info__vid">
           <h3>{title}</h3>

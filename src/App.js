@@ -5,6 +5,7 @@ import Sidebar from "./Sidebar";
 import Videos from "./Videos";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import SearchVideo from "./SearchVideo";
+import WatchVideo from "./WatchVideo";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Videos} />
             <Route path="/search/:query" component={SearchVideo} />
+            <Route path="/watch/:id" component={WatchVideo} />
           </Switch>
         </div>
       </div>

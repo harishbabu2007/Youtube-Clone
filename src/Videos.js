@@ -37,6 +37,7 @@ function Videos() {
                 img={item.snippet.thumbnails.medium.url}
                 title={truncate(item.snippet.title, 50)}
                 channel={item.snippet.channelTitle}
+                id={item.id.videoId}
               />
             ))}
         </div>

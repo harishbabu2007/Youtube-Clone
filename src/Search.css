@@ -18,7 +18,7 @@
 }
 
 @media (max-width: 890px) {
-  .search__every > img {
+  .search__every > a > img {
     object-fit: contain;
     height: 100px;
   }

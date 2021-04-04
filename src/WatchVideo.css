@@ -50,7 +50,7 @@
 
 .box {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .desc {
@@ -63,8 +63,15 @@
   display: flex;
 }
 
+.all_search_results {
+  max-width: 460px;
+}
+
 @media (max-width: 1200px) {
   .container_main {
     flex-direction: column;
+  }
+  .all_search_results {
+    max-width: none;
   }
 }

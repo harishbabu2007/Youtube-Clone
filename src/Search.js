@@ -18,7 +18,7 @@ const Generator = ({ id, img, title, channel }) => {
 };
 
 function Search({ query }) {
-  const api_key = "AIzaSyBRclFEYyh3Ispb5lN6m2FrIMy616CV9Uw";
+  const api_key = "";
   const url = "https://www.googleapis.com/youtube/v3";
   const [results, setResults] = useState(false);
 
@@ -31,6 +31,7 @@ function Search({ query }) {
         .then((res) => res.json())
         .then((data) => {
           setResults(data.items);
+          console.log(data.items);
         });
     };
     getData();
@@ -43,7 +44,7 @@ function Search({ query }) {
           return (
             <Generator
               title={item.snippet.title}
-              img={item.snippet.thumbnails.medium.url}
+              img={item.snippet.thumbnails.default.url}
               channel={item.snippet.channelTitle}
               id={item.id.videoId}
             />

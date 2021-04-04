@@ -12,13 +12,13 @@ function WatchVideo() {
 
   useEffect(() => {
     const getData = async () => {
-      const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=AIzaSyBRclFEYyh3Ispb5lN6m2FrIMy616CV9Uw`;
+      const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=`;
       await fetch(url)
         .then((res) => res.json())
         .then((data) => setResults(data));
     };
     const getStats = async () => {
-      const url = `https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${id}&key=AIzaSyBRclFEYyh3Ispb5lN6m2FrIMy616CV9Uw`;
+      const url = `https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${id}&key=`;
       await fetch(url)
         .then((res) => res.json())
         .then((data) => {

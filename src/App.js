@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import Footer from "./Footer";
 import Videos from "./Videos";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import SearchVideo from "./SearchVideo";
@@ -20,6 +21,7 @@ function App() {
             <Route path="/watch/:id" component={WatchVideo} />
           </Switch>
         </div>
+        <Footer />
       </div>
     </BrowserRouter>
   );

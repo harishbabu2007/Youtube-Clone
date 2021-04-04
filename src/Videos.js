@@ -3,7 +3,7 @@ import "./Videos.css";
 import VideoGen from "./VideoGen";
 
 function Videos() {
-  const api_key = "AIzaSyBRclFEYyh3Ispb5lN6m2FrIMy616CV9Uw";
+  const api_key = "";
   const url = "https://www.googleapis.com/youtube/v3";
   const [results, setResults] = useState(false);
 
